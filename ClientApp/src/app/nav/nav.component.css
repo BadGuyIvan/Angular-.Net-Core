@@ -1,0 +1,25 @@
+.nav_container {
+    display: flex;
+    min-height: 75px;
+    justify-content: flex-end;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.nav_container a {
+    margin: 20px;
+}
+
+.nav_container button {
+    border: none;
+    background-color: transparent;
+    margin: 20px;
+    color: #007bff;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.nav_container button:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}

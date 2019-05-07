@@ -1,0 +1,30 @@
+ body {
+   width: 100%;
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+ }
+
+ app-signin,
+ app-signup {
+   display: flex;
+   flex: 1;
+   justify-content: center;
+   align-items: center;
+ }
+
+ .spinner {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+
+ .main_container {
+   display: flex;
+   flex: 1;
+ }
+
+ .cdk-overlay-backdrop.cdk-overlay-backdrop-showing.dark-backdrop {
+   background: #000;
+   opacity: 0.85 !important;
+ }

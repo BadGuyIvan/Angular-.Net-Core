@@ -1,0 +1,6 @@
+<div class="Overlay" (click)="close()">
+  <div class="content" (click)="$event.stopPropagation()">
+    modal works! {{someProp}}
+    <input type="text" [(ngModel)]="name"/>
+  </div>
+</div>

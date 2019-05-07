@@ -1,0 +1,14 @@
+.Overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.Overlay > .content {
+   height: 49%;
+   width: 49%;
+   background-color: #ffffff;
+   padding: 25px;
+}

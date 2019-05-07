@@ -1,0 +1,9 @@
+<div class="container_home">
+  <input [(ngModel)]="name">
+  <button (click)="onClick()">Click</button>
+  <button (click)="createComponent()">Create</button>
+  <button (click)="showPreview()">Preview</button>
+  <p *ngFor="let result of results">{{result}}</p>
+</div>
+
+<ng-container #alertContainer></ng-container>

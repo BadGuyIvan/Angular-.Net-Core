@@ -1,0 +1,9 @@
+<div class="nav_container">
+    <div *ngIf="IsTokenExist(); else other_content">
+        <a routerLink="/signin">Signin</a>
+        <a routerLink="/signup">Signup</a>
+    </div>
+    <ng-template #other_content>
+        <Button (click)="SignOut()">SignOut</Button>
+    </ng-template>
+</div>

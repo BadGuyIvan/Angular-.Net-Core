@@ -1,0 +1,17 @@
+@import '~@angular/cdk/overlay-prebuilt.css';
+app-modal {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 49%;
+    left: 49%;
+    transform: translate(-49%, -49%);
+    background: radial-gradient( rgba(163, 161, 161, 0.8), rgba(49, 47, 47, 0.8));
+}
+
+.container_home {
+    padding: 10px;
+}

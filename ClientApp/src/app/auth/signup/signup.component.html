@@ -1,0 +1,22 @@
+<div class="signup_container">
+  <div class="title">SignUp</div>
+  <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+    <div class="form_container">
+      <label>Email</label>
+      <input type="email" formControlName="email">
+      <div *ngIf="errors_email.invalid && (errors_email.dirty || errors_email.touched)" class="container_errors">
+        <div *ngIf="errors_email.errors.required" class="error">
+          Email is required.
+        </div>
+        <div *ngIf="errors_email.errors.email" class="error">
+          Email isn't correct.
+        </div>
+      </div>
+    </div>
+    <div class="form_container">
+      <label>Password</label>
+      <input type="password" formControlName="password">
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+</div>
