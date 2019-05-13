@@ -54,10 +54,11 @@ export class HomeComponent implements OnInit {
   }
 
   showPreview(){
-    this.previewDialog.open();
+   this.previewDialog.open({name: this.name})
   }
 
   ngOnInit() {
+    this.previewDialog.prew.subscribe(prev => this.name = prev);
   }
 
 }

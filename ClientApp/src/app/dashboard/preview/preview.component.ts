@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Injector } from '@angular/core';
+import { PORTAL_DATA } from '../service/overlay.service';
 
 @Component({
   selector: 'app-preview',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PreviewComponent implements OnInit {
 
-  constructor() { }
+  private config;
+  name: String;
 
+  constructor(private injector: Injector) {
+    this.config = injector.get(PORTAL_DATA);
+  }
+  
   ngOnInit() {
+    this.name = this.config.name;
   }
 
 }
