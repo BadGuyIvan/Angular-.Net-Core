@@ -10,7 +10,7 @@ import { TokenGuardService as IsTokenExist } from "./guards/token-quard.service"
 import { NotFountComponent } from './not-fount/not-fount.component';
 import { LoaderInterceptor } from "./services/loader.interceptor"
 import { LoaderService } from './services/loader.service';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,15 +19,16 @@ import { LoaderService } from './services/loader.service';
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
+    BrowserAnimationsModule,
     HttpClientModule,
     FormsModule,
     RouterModule.forRoot([
       {
-        path: '', loadChildren: "./auth/auth.module#AuthModule",
+        path: '', loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule),
         canActivate: [IsTokenExist]
       },{
         path: 'dashboard', 
-        loadChildren: "./dashboard/dashboard.module#DashboardModule",
+        loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule),
         canActivate: [AuthGuard]
       }, {
         path: '**', component: NotFountComponent

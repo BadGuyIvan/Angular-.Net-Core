@@ -9,10 +9,17 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { OverlayModule } from "@angular/cdk/overlay";
 import { PreviewComponent } from './preview/preview.component';
 import { OverlayService } from './service/overlay.service';
+import { TooltipComponent } from './tooltip/tooltip.component';
+import { DunamictooltipComponent } from './tooltip/dunamictooltip/dunamictooltip.component';
+import { TooltipContainerComponent } from './tooltip/tooltip-container/tooltip-container.component';
+import { TooltipDirective } from './tooltip/directive/tooltip.directive';
 
 const routes: Routes = [
   {
     path: "", component: HomeComponent
+  },
+  {
+    path: "tooltip", component: TooltipComponent
   }
 ]
 
@@ -25,11 +32,19 @@ const routes: Routes = [
     OverlayModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [HomeComponent,ModalComponent, PreviewComponent],
+  declarations: [
+    HomeComponent,
+    ModalComponent, 
+    PreviewComponent, 
+    TooltipComponent, 
+    DunamictooltipComponent, 
+    TooltipContainerComponent, 
+    TooltipDirective
+  ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: HttpConfigInterceptor, multi: true },
     OverlayService
   ],
-  entryComponents: [ModalComponent, PreviewComponent]
+  entryComponents: [ModalComponent, PreviewComponent, TooltipContainerComponent]
 })
 export class DashboardModule { }

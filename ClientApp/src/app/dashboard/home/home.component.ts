@@ -16,7 +16,7 @@ import { OverlayService } from "../service/overlay.service";
   encapsulation: ViewEncapsulation.None
 })
 export class HomeComponent implements OnInit {
-  @ViewChild("alertContainer", { read: ViewContainerRef }) entry: ViewContainerRef;
+  @ViewChild("alertContainer", { read: ViewContainerRef, static: true }) entry: ViewContainerRef;
   @ContentChildren(ModalComponent) children: ModalComponent;
 
   componentRef: ComponentRef<any>;

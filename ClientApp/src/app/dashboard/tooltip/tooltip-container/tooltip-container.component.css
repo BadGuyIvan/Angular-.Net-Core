@@ -1,0 +1,7 @@
+.tooltip_container {
+    padding: 5px;
+    background-color: grey;
+    position: absolute;
+    max-width: 84px;
+    word-break: break-word;
+}

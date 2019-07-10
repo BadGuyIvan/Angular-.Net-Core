@@ -23,3 +23,7 @@
     color: #0056b3;
     text-decoration: underline;
 }
+
+.main_container {
+    margin-right: auto;
+}
